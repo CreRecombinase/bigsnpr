@@ -29,7 +29,7 @@ bool readbina(const char * filename,
   ifstream myFile(filename, ios::in | ios::binary);
   // magic number
   myFile.read((char*)buffer, 3);
-  myassert((buffer[0] == 108) && (buffer[1] == 27) && (buffer[2] = 1),
+  myassert(( 108 == buffer[0] ) && ( 27 == buffer[1]) && (1 == buffer[2] ),
            "Wrong magic number. Aborting..");
 
   for (j = 0; j < m; j++) {
